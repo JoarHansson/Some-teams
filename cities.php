@@ -9,7 +9,7 @@ for ($i = 0; $i < count($teams); $i++) :
     $cities[] = $teams[$arrayKeys[$i]]["city"];
 endfor; ?>
 
-<p>
-    Cities in the table:
+<div>
+    A table about football teams in
     <?= implode(", ", array_unique($cities)); ?>
-</p>
+</div>
