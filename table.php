@@ -5,38 +5,37 @@ require __DIR__ . "/data.php";
 ?>
 
 <table>
-    <thead>
-        <tr>
-            <th>Team</th>
-            <th>League</th>
-            <th>Champions (last time)</th>
-            <th>City</th>
-            <th>Nickname</th>
-            <th>Website</th>
-        </tr>
-    </thead>
-    <tbody>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>League</th>
+      <th>Champions (last time)</th>
+      <th>City</th>
+      <th>Nickname</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
 
-        <?php
-        for ($i = 0; $i < count($teams); $i++) :
-            $arrayKeys = array_keys($teams); ?>
+    <?php
+    foreach ($teams as $teamName => $teamData) : ?>
 
-            <tr>
-                <th><?= $arrayKeys[$i]; ?></th>
-                <td><?= $teams[$arrayKeys[$i]]["league"]; ?></td>
-                <td><?= $teams[$arrayKeys[$i]]["last-time-champions"] ?? "-"; ?></td>
-                <td><?= $teams[$arrayKeys[$i]]["city"]; ?></td>
-                <td><?= $teams[$arrayKeys[$i]]["nickname"] ?? "-"; ?></td>
-                <td><?= $teams[$arrayKeys[$i]]["url"]; ?></td>
-            </tr>
+      <tr>
+        <th><?= $teamName; ?></th>
+        <td><?= $teamData["league"]; ?></td>
+        <td><?= $teamData["last-time-champions"] ?? "-"; ?></td>
+        <td><?= $teamData["city"]; ?></td>
+        <td><?= $teamData["nickname"] ?? "-"; ?></td>
+        <td><?= $teamData["url"]; ?></td>
+      </tr>
 
-        <?php endfor; ?>
+    <?php endforeach; ?>
 
-    </tbody>
-    <caption>
+  </tbody>
+  <caption>
 
-        <?php require __DIR__ . "/cities.php";
-        require __DIR__ . "/teams.php"; ?>
+    <?php require __DIR__ . "/cities.php";
+    require __DIR__ . "/teams.php"; ?>
 
-    </caption>
+  </caption>
 </table>
