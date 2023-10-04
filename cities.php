@@ -1,7 +1,5 @@
 <?php
 
-require __DIR__ . "/data.php";
-
 $cities = [];
 
 foreach ($teams as $teamName => $teamData) {
