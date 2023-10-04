@@ -1,3 +1,5 @@
+/* General: */
+
 * {
   box-sizing: border-box;
 }
@@ -16,6 +18,8 @@ body {
   margin: 10rem auto;
 }
 
+/* Header: */
+
 header {
   align-self: flex-start;
 }
@@ -28,6 +32,8 @@ h1 {
   margin: 0 0 1.5rem 0;
   color: #1b68c0;
 }
+
+/* Table: */
 
 table {
   width: 1400px;
