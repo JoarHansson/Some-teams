@@ -4,4 +4,4 @@ A repo for the assignment Some teams, within the course of study [Webbutvecklare
 The assignment was to retrieve array data and display it in tabular format, using PHP.\
 The file [```data.php```](./data.php) was provided for the assignment.
 
-Deployed site can be found [here](http://php-fanclub.se/some-teams/)
+Deployed site can be found [here](https://php-fanclub.se/some-teams/)
